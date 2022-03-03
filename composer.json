@@ -1,6 +1,20 @@
 {
+    "name": "eddmann/will-it-run",
+    "description": "Check what cron jobs will run at a given time/range.",
+    "type": "project",
+    "license": "proprietary",
     "require": {
+        "php": ">=7.4",
         "adhocore/cron-expr": "^1.1",
         "symfony/console": "^5.4"
+    },
+    "require-dev": {
+        "bamarni/composer-bin-plugin": "^1.5"
+    },
+    "scripts": {
+        "build": "box compile",
+        "bin": "echo 'bin not installed'",
+        "post-install-cmd": ["@composer bin all install --ansi"],
+        "post-update-cmd": ["@composer bin all update --ansi"]
     }
 }
